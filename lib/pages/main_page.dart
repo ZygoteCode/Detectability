@@ -35,17 +35,6 @@ class _MainPageState extends State<MainPage> {
             Row(
               children: [
                 Icon(
-                  detections.isReallyRealDevice() ? Icons.check_box_rounded : Icons.close,
-                  color: detections.isReallyRealDevice() ? Colors.green : Colors.red,
-                ),
-                Text(
-                    detections.isReallyRealDevice() ? "You are on a real device" : "You are NOT on a real device"
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Icon(
                   detections.isOnExternalStorage() ? Icons.close : Icons.check_box_rounded,
                   color: detections.isOnExternalStorage() ? Colors.red : Colors.green,
                 ),
@@ -94,7 +83,7 @@ class _MainPageState extends State<MainPage> {
                   color: detections.hasCorrectlyInstalled() ? Colors.green : Colors.red,
                 ),
                 Text(
-                    detections.hasCorrectlyInstalled() ? "The application is installed from Google Play Store" : "The application is NOT installed from Google Play Store"
+                    detections.hasCorrectlyInstalled() ? "The application is installed\r\nfrom Google Play Store" : "The application is NOT installed\r\nfrom Google Play Store"
                 ),
               ],
             ),
